@@ -12,11 +12,24 @@ module.exports = {
         filename: 'js/[name]_[hash:8].js',
         path: path.resolve(process.cwd(), 'dist'),
     },
+    resolve: {
+        alias: {
+            '@': path.resolve(process.cwd(), './example'),
+        },
+    },
     module: {
         rules: [
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    'less-loader'
+                ],
             }
         ],
     },
@@ -33,6 +46,7 @@ module.exports = {
             template: path.resolve(process.cwd(), 'example/pages/template.html')
         }),
     ],
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
         contentBase: path.join(process.cwd(), 'dist'),
         open: true,
