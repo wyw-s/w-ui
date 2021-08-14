@@ -1,0 +1,25 @@
+[
+    {
+        "name": "开发指南",
+        "children": [
+            {
+                "path": "/installation",
+                "name": "安装"
+            }
+        ]
+    },
+    {
+        "name": "组件",
+        "groups": [
+            {
+                "groupName": "Form",
+                "list": [
+                    {
+                        "path": "/select",
+                        "title": "Select 选择器"
+                    }
+                ]
+            }
+        ]
+    }
+]

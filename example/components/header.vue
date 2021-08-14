@@ -1,18 +1,12 @@
 <template>
     <header class="header">
         <div class="container">
-            <h1>ui
-                <!--<router-link>00</router-link>-->
-            </h1>
-
+            <h1><router-link to="/">LOGO</router-link></h1>
             <!-- nav -->
             <ul class="nav">
-                <li class="nav-item nav-algolia-search">
-                    <!--<algolia-search></algolia-search>-->
-                </li>
-                <li class="nav-item">rthty
-                    <!--<router-link>{{ 'langConfig.guide' }}</router-link>-->
-                </li>
+                <li class="nav-item"><router-link to="/">首页</router-link></li>
+                <li class="nav-item nav-algolia-search">搜索</li>
+                <li class="nav-item"><router-link to="/component">组件</router-link></li>
             </ul>
         </div>
     </header>
@@ -21,7 +15,6 @@
 .header {
     height: 60px;
     background-color: #fff;
-    color: #fff;
     top: 0;
     left: 0;
     width: 100%;
@@ -33,10 +26,6 @@
         height: 100%;
         box-sizing: border-box;
         border-bottom: 1px solid #DCDFE6;
-    }
-
-    .nav-lang-spe {
-        color: #888;
     }
 
     h1 {
@@ -68,7 +57,7 @@
     .nav {
         float: right;
         height: 100%;
-        line-height: 80px;
+        line-height: 60px;
         background: transparent;
         padding: 0;
         margin: 0;
@@ -213,5 +202,31 @@
 
 .nav-dropdown-list {
     width: auto;
+}
+
+@media (max-width: 850px) {
+    .header {
+        .nav-logo {
+            display: none;
+        }
+        .nav-logo-small {
+            display: inline-block;
+        }
+        .nav-item {
+            margin-left: 6px;
+
+            &.lang-item,
+            &:last-child {
+                margin-left: 10px;
+            }
+
+            a {
+                padding: 0 5px;
+            }
+        }
+        .nav-theme-switch, .nav-algolia-search {
+            display: none;
+        }
+    }
 }
 </style>

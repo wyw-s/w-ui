@@ -24,6 +24,17 @@ module.exports = {
                 loader: 'vue-loader',
             },
             {
+                test: /\.md$/,
+                use: [
+                    {
+                        loader: 'vue-loader',
+                    },
+                    {
+                        loader: path.resolve(process.cwd(), './example/plugins/md-loader/index.js'),
+                    }
+                ],
+            },
+            {
                 test: /\.less$/,
                 use: [
                     "style-loader",
