@@ -1,10 +1,10 @@
 <template>
-
+<div>SELECT</div>
 </template>
 
 <script>
 export default {
-    name: 'select',
+    name: 'WSelect',
 }
 </script>
 

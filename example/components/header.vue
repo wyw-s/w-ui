@@ -5,7 +5,7 @@
             <!-- nav -->
             <ul class="nav">
                 <li class="nav-item"><router-link to="/">首页</router-link></li>
-                <li class="nav-item nav-algolia-search">搜索</li>
+                <!--<li class="nav-item nav-algolia-search">搜索</li>-->
                 <li class="nav-item"><router-link to="/component">组件</router-link></li>
             </ul>
         </div>
@@ -13,14 +13,14 @@
 </template>
 <style lang="less" scoped>
 .header {
+    position: fixed;
+    width: 100%;
     height: 60px;
-    background-color: #fff;
+    line-height: 60px;
     top: 0;
     left: 0;
-    width: 100%;
-    line-height: 60px;
     z-index: 100;
-    position: relative;
+    background-color: #fff;
 
     .container {
         height: 100%;
@@ -109,7 +109,6 @@
         &.lang-item,
         &:last-child {
             cursor: default;
-            margin-left: 34px;
 
             span {
                 opacity: .8;

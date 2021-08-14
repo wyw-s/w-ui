@@ -1,12 +1,7 @@
 [
     {
         "name": "开发指南",
-        "children": [
-            {
-                "path": "/installation",
-                "name": "安装"
-            }
-        ]
+        "path": "/installation"
     },
     {
         "name": "组件",

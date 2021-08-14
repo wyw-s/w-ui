@@ -4,7 +4,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
 module.exports = {
     mode: 'development',
     entry: './example/index.js',
@@ -13,12 +12,23 @@ module.exports = {
         path: path.resolve(process.cwd(), 'dist'),
     },
     resolve: {
+        extensions: ['.js', '.vue', '.json'],
         alias: {
             '@': path.resolve(process.cwd(), './example'),
+            '@packages': path.resolve(process.cwd(), './packages'),
         },
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        plugins: ['@babel/plugin-syntax-export-default-from']
+                    }
+                }
+            },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
@@ -60,6 +70,6 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     devServer: {
         contentBase: path.join(process.cwd(), 'dist'),
-        open: true,
+        // open: true,
     },
 }

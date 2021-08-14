@@ -4,6 +4,7 @@
         <main class="main">
             <router-view></router-view>
         </main>
+        <main-footer></main-footer>
     </div>
 </template>
 
@@ -17,3 +18,19 @@ export default {
     }
 }
 </script>
+<style lang="less" scoped>
+#app {
+    overflow-y: hidden;
+    background: #eee;
+    .main {
+        box-sizing: border-box;
+        width: 1140px;
+        margin: 80px auto 20px;
+        //height: 100%;
+        height: calc(100% - 80px);
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 10px;
+    }
+}
+</style>

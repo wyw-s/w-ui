@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container footer-wrapper">
     底部
 </div>
 </template>
@@ -9,6 +9,9 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+.footer-wrapper {
+    height: 60px;
+    background: #ffffff;
+}
 </style>

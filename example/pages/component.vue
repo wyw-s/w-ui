@@ -1,23 +1,47 @@
 <template>
     <div class="container page-component">
-        <nav-bar></nav-bar>
-        <router-view></router-view>
+        <div class="sidebar-view">
+            <side-bar :resource="navData"></side-bar>
+        </div>
+        <div class="markdown-body-view">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
 <script>
-import navBar from '@/components/navBar.vue'
+import sideBar from '@/components/sidebar.vue';
+import navData from '@/router/nav.config.json';
 export default {
     components: {
-        navBar
+        sideBar
+    },
+    data() {
+        return {
+            navData
+        }
     }
 }
 </script>
 
 <style lang="less" scoped>
 .page-component {
-    box-sizing: border-box;
-    height: 100%;
+    position: relative;
+    overflow-y: auto;
+
+    .sidebar-view {
+        position: absolute;
+        width: 240px;
+        height: 100%;
+        border-right: 1px solid #d7dde4;
+    }
+    .markdown-body-view {
+        box-sizing: border-box;
+        overflow: auto;
+        height: 100%;
+        width: 1140px;
+        padding-left: 270px;
+    }
 
     &.page-container {
         padding: 0;
