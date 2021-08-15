@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="container">
-            <h1><router-link to="/">LOGO</router-link></h1>
+            <h1><router-link to="/">WUI</router-link></h1>
             <!-- nav -->
             <ul class="nav">
                 <li class="nav-item"><router-link to="/">首页</router-link></li>
@@ -21,11 +21,12 @@
     left: 0;
     z-index: 100;
     background-color: #fff;
+    box-shadow: 0px 0px 10px 2px #ccc;
 
     .container {
         height: 100%;
         box-sizing: border-box;
-        border-bottom: 1px solid #DCDFE6;
+        //border-bottom: 1px solid #DCDFE6;
     }
 
     h1 {

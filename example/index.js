@@ -5,7 +5,10 @@ import WUI from '@/wui';
 import '@/assets/style/base.less';
 import '@/assets/style/markdown.less';
 
+import demoBlock from '@/pages/demo-block';
+
 Vue.use(WUI);
+Vue.component('demo-block', demoBlock);
 
 Vue.config.productionTip = false
 

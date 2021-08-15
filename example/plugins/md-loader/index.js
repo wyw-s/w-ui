@@ -105,7 +105,7 @@ module.exports = function(source) {
   output.push(content.slice(start));
   return `
     <template>
-      <section class="content element-doc">
+      <section class="content element-doc markdown-body">
         ${output.join('')}
       </section>
     </template>

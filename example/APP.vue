@@ -26,8 +26,7 @@ export default {
         box-sizing: border-box;
         width: 1140px;
         margin: 80px auto 20px;
-        //height: 100%;
-        height: calc(100% - 80px);
+        min-height: calc(100vh - 140px);
         background: #ffffff;
         border-radius: 8px;
         padding: 10px;

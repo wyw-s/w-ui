@@ -1,10 +1,15 @@
 <template>
-<div>SELECT</div>
+<div>{{ text }}</div>
 </template>
 
 <script>
 export default {
     name: 'WSelect',
+    data() {
+        return {
+            text: 'SELECT'
+        }
+    }
 }
 </script>
 

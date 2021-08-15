@@ -71,7 +71,7 @@ routes.push({
 });
 
 Vue.use(VueRouter);
-console.log(routes)
+
 export default new VueRouter({
     mode: 'hash',
     routes

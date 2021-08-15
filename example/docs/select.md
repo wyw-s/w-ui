@@ -6,9 +6,11 @@
 
 适用广泛的基础单选
 
-:::
+::: demo 通过组件
 ```javascript
-<select></select>
+
+<w-select></w-select>
+
 ```
 
 :::
