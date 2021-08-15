@@ -1,4 +1,4 @@
-name: Publish docs to github actions
+name: Publish wui to github actions
 
 on:
   # 每当 push 到 main 分支时触发部署
@@ -8,11 +8,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  docs:
+  wui:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
@@ -46,11 +47,13 @@ jobs:
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           # 部署到 gh-pages 分支
-          target_branch: gh-pages
+          branch: gh-pages
           # 部署目录为 VuePress 的默认输出目录
-          build_dir: dist
-        env:
+          folder: dist
+          token: ${{ secrets.TOKEN }}
+          repository-name: wyw-s/w-ui
+#        env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
