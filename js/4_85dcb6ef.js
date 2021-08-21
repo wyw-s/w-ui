@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{10:function(e,n,t){"use strict";t.r(n);var i=function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n    首页\n")])};i._withStripped=!0;var a={name:"home"},s=t(0),o=Object(s.a)(a,i,[],!1,null,"1ae9fd9a",null);o.options.__file="example/views/home.vue";n.default=o.exports}}]);
