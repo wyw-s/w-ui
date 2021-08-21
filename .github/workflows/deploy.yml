@@ -1,14 +1,14 @@
-name: Publish wui to github actions
+name: Publish w-ui to github actions
 
 on:
   # 每当 push 到 main 分支时触发部署
   push:
     branches: [master]
   # 手动触发部署
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
-  wui:
+  w-ui:
     runs-on: ubuntu-latest
 
     steps:

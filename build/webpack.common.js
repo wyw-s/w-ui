@@ -2,6 +2,7 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: './example/index.js',
@@ -50,6 +51,11 @@ module.exports = {
             title: 'W-UI',
             filename: 'index.html',
             template: path.resolve(process.cwd(), 'example/pages/template.html')
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: path.resolve(process.cwd(), 'CNAME')},
+            ],
         }),
     ],
 };
